@@ -4,7 +4,7 @@ pipeline{
         stage('Code-Pull'){
             steps{
                 git branch: 'main', url: 'https://github.com/VishakhaPatil-03/Flight-Reservation-App.git'
-}
+            }
         }
         stage('Code-Build'){
             steps{
@@ -41,7 +41,7 @@ pipeline{
                     docker rmi vishupatil14/flight-reservation-pls-18:latest
                 '''
             }
-
+        }
         stage('Deploy-to-Kubernetes'){
             steps{
                 sh '''
@@ -53,5 +53,6 @@ pipeline{
 
        
         
-    }
+    
+}
 }
