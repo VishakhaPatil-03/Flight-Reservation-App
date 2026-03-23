@@ -45,6 +45,7 @@ pipeline{
         stage('Deploy-to-Kubernetes'){
             steps{
                 sh '''
+                    cd FlightReservationApplication
                     kubectl apply -f k8s/
                   
                 '''
